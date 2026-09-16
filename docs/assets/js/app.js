@@ -207,32 +207,32 @@ function getPositionClass(pos) {
     if (pos === 1) return 'pos-1';
     if (pos === 2) return 'pos-2';
     if (pos === 3) return 'pos-3';
-    return 'bg-gray-700';
+    return 'pos-n';
 }
 
 function renderDriverStandings(data) {
     const container = document.getElementById('driver-standings');
     if (!data?.standings?.length) {
-        container.innerHTML = '<div class="text-center text-gray-500 py-8">No standings available</div>';
+        container.innerHTML = '<div class="text-center meta py-8">No standings available</div>';
         return;
     }
     
     let lastUpdatedHtml = '';
     if (data.lastUpdated) {
         const date = new Date(data.lastUpdated);
-        lastUpdatedHtml = `<div class="mt-4 pt-3 border-t border-gray-800 text-right text-xs text-gray-500" title="${date.toLocaleString()}">Updated ${getTimeAgo(date)}</div>`;
+        lastUpdatedHtml = `<div class="mt-4 pt-3 text-right updated" title="${date.toLocaleString()}">Updated ${getTimeAgo(date)}</div>`;
     }
     
     container.innerHTML = data.standings.slice(0, 10).map(s => `
-        <div class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-800/50 transition-colors">
-            <div class="w-8 h-8 rounded-md ${getPositionClass(s.position)} flex items-center justify-center font-bold text-sm">${s.position}</div>
+        <div class="standings-row">
+            <div class="pos-badge ${getPositionClass(s.position)}">${s.position}</div>
             <div class="flex-1 min-w-0">
                 <div class="flex items-center gap-2">
                     <span class="font-semibold truncate">${s.driver}</span>
-                    <span class="px-1.5 py-0.5 text-[10px] font-bold uppercase rounded ${getTeamBadgeClass(s.team)} text-white">${s.team.substring(0, 3).toUpperCase()}</span>
+                    <span class="team-chip ${getTeamBadgeClass(s.team)}">${s.team.substring(0, 3).toUpperCase()}</span>
                 </div>
             </div>
-            <div class="text-sm font-medium text-gray-400">${s.points}<span class="text-gray-600 ml-1">pts</span></div>
+            <div class="pts">${s.points}<span>pts</span></div>
         </div>
     `).join('') + lastUpdatedHtml;
 }
@@ -240,17 +240,17 @@ function renderDriverStandings(data) {
 function renderConstructorStandings(standings) {
     const container = document.getElementById('constructor-standings');
     if (!standings?.length) {
-        container.innerHTML = '<div class="text-center text-gray-500 py-8">No standings available</div>';
+        container.innerHTML = '<div class="text-center meta py-8">No standings available</div>';
         return;
     }
     
     container.innerHTML = standings.slice(0, 10).map(s => `
-        <div class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-800/50 transition-colors">
-            <div class="w-8 h-8 rounded-md ${getPositionClass(s.position)} flex items-center justify-center font-bold text-sm">${s.position}</div>
+        <div class="standings-row">
+            <div class="pos-badge ${getPositionClass(s.position)}">${s.position}</div>
             <div class="flex-1 min-w-0">
                 <span class="font-semibold truncate">${s.constructor}</span>
             </div>
-            <div class="text-sm font-medium text-gray-400">${s.points}<span class="text-gray-600 ml-1">pts</span></div>
+            <div class="pts">${s.points}<span>pts</span></div>
         </div>
     `).join('');
 }
@@ -282,13 +282,13 @@ function renderNextRace(race) {
     Object.entries(sessionsByDay).forEach(([day, sessions]) => {
         html += `
             <div class="mb-3">
-                <div class="text-[10px] font-semibold uppercase tracking-widest text-gray-600 mb-1.5">${day}</div>
+                <div class="day-label">${day}</div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     ${sessions.map(s => `
-                        <div class="flex flex-col px-3 py-2.5 bg-gray-800/60 hover:bg-gray-800/80 rounded-lg border border-gray-700/50 hover:border-gray-600/50 transition-all text-center">
-                            <span class="text-[11px] font-semibold uppercase tracking-wide text-gray-400">${s.name}</span>
-                            <span class="text-sm font-bold text-white mt-1">${formatDateTime(s.date)}</span>
-                            <span class="text-[10px] text-gray-500 mt-0.5">${formatUTC(s.date)}</span>
+                        <div class="session-chip">
+                            <span class="name">${s.name}</span>
+                            <span class="local">${formatDateTime(s.date)}</span>
+                            <span class="utc">${formatUTC(s.date)}</span>
                         </div>
                     `).join('')}
                 </div>
@@ -298,16 +298,10 @@ function renderNextRace(race) {
     // Race - full width, prominent
     if (raceSession) {
         html += `
-            <div class="relative overflow-hidden rounded-xl border-2 border-ferrari/50 bg-gradient-to-br from-red-950/50 via-gray-900 to-red-950/30">
-                <div class="absolute inset-0 bg-gradient-to-r from-ferrari/10 via-transparent to-ferrari/10"></div>
-                <div class="relative flex flex-col items-center px-4 py-4 text-center">
-                    <div class="flex items-center gap-2 mb-1">
-                        <span class="text-xl">🏁</span>
-                        <span class="text-xs font-black uppercase tracking-[0.2em] text-ferrari">Race</span>
-                    </div>
-                    <span class="text-xl font-black text-white">${formatDateTime(raceSession.date)}</span>
-                    <span class="text-xs text-gray-400 mt-1">${formatUTC(raceSession.date)}</span>
-                </div>
+            <div class="race-highlight">
+                <div class="kicker">Race</div>
+                <span class="when">${formatDateTime(raceSession.date)}</span>
+                <span class="utc">${formatUTC(raceSession.date)}</span>
             </div>`;
     }
     
@@ -319,26 +313,26 @@ function renderLatestResults(data) {
     
     if (!data) {
         header.textContent = 'No session results';
-        tbody.innerHTML = '<tr><td colspan="3" class="py-8 text-center text-gray-500">Check back after a session</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="3" class="py-8 text-center meta">Check back after a session</td></tr>';
         return;
     }
     
-    const cacheBadge = data.cached ? '<span class="ml-2 px-2 py-0.5 text-[10px] bg-gray-700 rounded font-medium">💾 Cached</span>' : '';
-    header.innerHTML = `<span class="font-semibold text-white">${data.sessionName}</span> - ${data.raceName}${cacheBadge}`;
+    const cacheBadge = data.cached ? '<span class="ml-2 px-2 py-0.5 text-[10px] team-chip bg-gray-600">Cached</span>' : '';
+    header.innerHTML = `<span class="font-semibold">${data.sessionName}</span> — ${data.raceName}${cacheBadge}`;
     
     if (data.fastestLap) {
         header.innerHTML += ` <span class="ml-2 text-purple-400 text-xs"><span class="px-1.5 py-0.5 bg-purple-500 rounded text-white font-bold">FL</span> ${data.fastestLap.driver}</span>`;
     }
     
     tbody.innerHTML = data.results.map(r => `
-        <tr class="border-b border-gray-800/50 last:border-0 hover:bg-gray-800/30 transition-colors">
-            <td class="py-2.5"><div class="w-7 h-7 rounded-md ${getPositionClass(r.position)} flex items-center justify-center font-bold text-xs">${r.position}</div></td>
-            <td class="py-2.5">
+        <tr>
+            <td><div class="pos-badge ${getPositionClass(r.position)}">${r.position}</div></td>
+            <td>
                 <span class="font-medium">${r.driver}</span>
-                ${r.fastestLap ? '<span class="ml-1 px-1.5 py-0.5 bg-purple-500 rounded text-[10px] font-bold">FL</span>' : ''}
-                <span class="ml-2 px-1.5 py-0.5 text-[10px] font-bold uppercase rounded ${getTeamBadgeClass(r.team)} text-white">${r.team.substring(0, 3).toUpperCase()}</span>
+                ${r.fastestLap ? '<span class="ml-1 px-1.5 py-0.5 bg-purple-500 text-white text-[10px] font-bold">FL</span>' : ''}
+                <span class="ml-2 team-chip ${getTeamBadgeClass(r.team)}">${r.team.substring(0, 3).toUpperCase()}</span>
             </td>
-            <td class="py-2.5 text-right text-gray-400 font-mono text-sm">${r.time || '-'}</td>
+            <td class="time">${r.time || '-'}</td>
         </tr>
     `).join('');
 }

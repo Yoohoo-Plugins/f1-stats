@@ -8,13 +8,13 @@ Live Formula 1 statistics dashboard with real-time data from the OpenF1 API.
 - **Constructor Standings** - Current season constructor championship standings
 - **Next Race** - Upcoming race schedule with session times
 - **Latest Results** - Most recent session results with lap times
-- **Dark/Light Mode** - Toggle between themes, persists preference
+- **Dark/Light Mode** - Pit-wall theme with persistent toggle
 - **Client-side Caching** - Reduces API calls with smart caching
 - **Responsive Design** - Works on desktop and mobile
 
 ## Live Demo
 
-Visit the live site at: `https://[username].github.io/f1-stats/`
+Visit the live site at: https://simplef1stats.com/
 
 ## Data Source
 
