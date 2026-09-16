@@ -303,17 +303,20 @@
         });
 
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js').then(reg => {
-                reg.onupdatefound = () => {
-                    const installingWorker = reg.installing;
-                    installingWorker.onstatechange = () => {
-                        if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                            if (confirm('New version available! Reload to update?')) {
-                                caches.keys().then(keys => keys.forEach(k => caches.delete(k))).then(() => location.reload());
-                            }
-                        }
-                    };
-                };
+            let refreshing = false;
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                if (refreshing) return;
+                refreshing = true;
+                location.reload();
+            });
+            navigator.serviceWorker.addEventListener('message', (event) => {
+                if (event.data?.type === 'SW_UPDATED' && !refreshing) {
+                    refreshing = true;
+                    location.reload();
+                }
+            });
+            navigator.serviceWorker.register('/sw.js?v=5').then(reg => {
+                reg.update();
             }).catch(() => {});
         }
 
