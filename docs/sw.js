@@ -1,4 +1,4 @@
-const CACHE_NAME = 'f1-stats-v5';
+const CACHE_NAME = 'f1-stats-v6';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
@@ -42,8 +42,14 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+function isAnalyticsRequest(request) {
+  const url = new URL(request.url);
+  return url.hostname === 'gc.zgo.at' || url.hostname.endsWith('goatcounter.com');
+}
+
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+  if (isAnalyticsRequest(event.request)) return;
 
   if (isShellRequest(event.request)) {
     event.respondWith(

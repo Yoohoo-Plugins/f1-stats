@@ -315,7 +315,7 @@
                     location.reload();
                 }
             });
-            navigator.serviceWorker.register('/sw.js?v=5').then(reg => {
+            navigator.serviceWorker.register('/sw.js?v=6').then(reg => {
                 reg.update();
             }).catch(() => {});
         }
@@ -364,5 +364,7 @@
             localStorage.setItem('f1-install-dismissed', Date.now().toString());
         });
     </script>
+    <script data-goatcounter="https://simplef1stats.goatcounter.com/count"
+            async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
