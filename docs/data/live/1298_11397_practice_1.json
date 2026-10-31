@@ -1,0 +1,233 @@
+{
+  "session_key": 11397,
+  "session_name": "Practice 1",
+  "session_type": "Practice",
+  "date_start": "2026-10-30T18:30:00+00:00",
+  "date_end": "2026-10-30T19:30:00+00:00",
+  "meeting_key": 1298,
+  "meeting_name": "Mexico City Grand Prix",
+  "location": "Mexico City",
+  "is_race": false,
+  "results": [
+    {
+      "position": 1,
+      "driver_number": 16,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 2,
+      "driver_number": 12,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 3,
+      "driver_number": 72,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 4,
+      "driver_number": 44,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 5,
+      "driver_number": 36,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 6,
+      "driver_number": 10,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 7,
+      "driver_number": 14,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 8,
+      "driver_number": 81,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 9,
+      "driver_number": 87,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 10,
+      "driver_number": 41,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 11,
+      "driver_number": 6,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 12,
+      "driver_number": 91,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 13,
+      "driver_number": 27,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 14,
+      "driver_number": 62,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 15,
+      "driver_number": 50,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 16,
+      "driver_number": 55,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 17,
+      "driver_number": 67,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 18,
+      "driver_number": 11,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 19,
+      "driver_number": 34,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 20,
+      "driver_number": 46,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 21,
+      "driver_number": 98,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    },
+    {
+      "position": 22,
+      "driver_number": 25,
+      "driver_code": null,
+      "driver_name": null,
+      "team": null,
+      "best_lap": null,
+      "best_lap_time": null,
+      "gap_to_fastest": null
+    }
+  ]
+}
