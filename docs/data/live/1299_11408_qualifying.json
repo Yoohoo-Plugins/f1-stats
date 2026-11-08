@@ -1,0 +1,233 @@
+{
+  "session_key": 11408,
+  "session_name": "Qualifying",
+  "session_type": "Qualifying",
+  "date_start": "2026-11-07T18:00:00+00:00",
+  "date_end": "2026-11-07T19:00:00+00:00",
+  "meeting_key": 1299,
+  "meeting_name": "São Paulo Grand Prix",
+  "location": "São Paulo",
+  "is_race": false,
+  "results": [
+    {
+      "position": 1,
+      "driver_number": 1,
+      "driver_code": "NOR",
+      "driver_name": "Lando Norris",
+      "team": "McLaren",
+      "best_lap": 87.47,
+      "best_lap_time": "1:27.470",
+      "gap_to_fastest": null
+    },
+    {
+      "position": 2,
+      "driver_number": 63,
+      "driver_code": "RUS",
+      "driver_name": "George Russell",
+      "team": "Mercedes",
+      "best_lap": 86.745,
+      "best_lap_time": "+-0.725",
+      "gap_to_fastest": -0.7249999999999943
+    },
+    {
+      "position": 3,
+      "driver_number": 12,
+      "driver_code": "ANT",
+      "driver_name": "Kimi Antonelli",
+      "team": "Mercedes",
+      "best_lap": 88.095,
+      "best_lap_time": "+0.625",
+      "gap_to_fastest": 0.625
+    },
+    {
+      "position": 4,
+      "driver_number": 16,
+      "driver_code": "LEC",
+      "driver_name": "Charles Leclerc",
+      "team": "Ferrari",
+      "best_lap": 88.082,
+      "best_lap_time": "+0.612",
+      "gap_to_fastest": 0.6119999999999948
+    },
+    {
+      "position": 5,
+      "driver_number": 30,
+      "driver_code": "LAW",
+      "driver_name": "Liam Lawson",
+      "team": "Racing Bulls",
+      "best_lap": 87.049,
+      "best_lap_time": "+-0.421",
+      "gap_to_fastest": -0.42099999999999227
+    },
+    {
+      "position": 6,
+      "driver_number": 27,
+      "driver_code": "HUL",
+      "driver_name": "Nico Hulkenberg",
+      "team": "Audi",
+      "best_lap": 88.361,
+      "best_lap_time": "+0.891",
+      "gap_to_fastest": 0.8910000000000053
+    },
+    {
+      "position": 7,
+      "driver_number": 6,
+      "driver_code": "HAD",
+      "driver_name": "Isack Hadjar",
+      "team": "Red Bull Racing",
+      "best_lap": 87.218,
+      "best_lap_time": "+-0.252",
+      "gap_to_fastest": -0.25199999999999534
+    },
+    {
+      "position": 8,
+      "driver_number": 87,
+      "driver_code": "BEA",
+      "driver_name": "Oliver Bearman",
+      "team": "Haas F1 Team",
+      "best_lap": 89.13,
+      "best_lap_time": "+1.660",
+      "gap_to_fastest": 1.6599999999999966
+    },
+    {
+      "position": 9,
+      "driver_number": 14,
+      "driver_code": "ALO",
+      "driver_name": "Fernando Alonso",
+      "team": "Aston Martin",
+      "best_lap": 89.072,
+      "best_lap_time": "+1.602",
+      "gap_to_fastest": 1.6020000000000039
+    },
+    {
+      "position": 10,
+      "driver_number": 23,
+      "driver_code": "ALB",
+      "driver_name": "Alexander Albon",
+      "team": "Williams",
+      "best_lap": 88.918,
+      "best_lap_time": "+1.448",
+      "gap_to_fastest": 1.4480000000000075
+    },
+    {
+      "position": 11,
+      "driver_number": 44,
+      "driver_code": "HAM",
+      "driver_name": "Lewis Hamilton",
+      "team": "Ferrari",
+      "best_lap": 90.001,
+      "best_lap_time": "+2.531",
+      "gap_to_fastest": 2.531000000000006
+    },
+    {
+      "position": 12,
+      "driver_number": 81,
+      "driver_code": "PIA",
+      "driver_name": "Oscar Piastri",
+      "team": "McLaren",
+      "best_lap": 90.369,
+      "best_lap_time": "+2.899",
+      "gap_to_fastest": 2.899000000000001
+    },
+    {
+      "position": 13,
+      "driver_number": 51,
+      "driver_code": "CAM",
+      "driver_name": "Rafael Câmara",
+      "team": "Haas F1 Team",
+      "best_lap": 91.47,
+      "best_lap_time": "+4.000",
+      "gap_to_fastest": 4
+    },
+    {
+      "position": 14,
+      "driver_number": 41,
+      "driver_code": "LIN",
+      "driver_name": "Arvid Lindblad",
+      "team": "Racing Bulls",
+      "best_lap": 91.687,
+      "best_lap_time": "+4.217",
+      "gap_to_fastest": 4.216999999999999
+    },
+    {
+      "position": 15,
+      "driver_number": 55,
+      "driver_code": "SAI",
+      "driver_name": "Carlos Sainz",
+      "team": "Williams",
+      "best_lap": 91.785,
+      "best_lap_time": "+4.315",
+      "gap_to_fastest": 4.314999999999998
+    },
+    {
+      "position": 16,
+      "driver_number": 3,
+      "driver_code": "VER",
+      "driver_name": "Max Verstappen",
+      "team": "Red Bull Racing",
+      "best_lap": 91.238,
+      "best_lap_time": "+3.768",
+      "gap_to_fastest": 3.7680000000000007
+    },
+    {
+      "position": 17,
+      "driver_number": 43,
+      "driver_code": "COL",
+      "driver_name": "Franco Colapinto",
+      "team": "Alpine",
+      "best_lap": 93.327,
+      "best_lap_time": "+5.857",
+      "gap_to_fastest": 5.856999999999999
+    },
+    {
+      "position": 18,
+      "driver_number": 10,
+      "driver_code": "GAS",
+      "driver_name": "Pierre Gasly",
+      "team": "Alpine",
+      "best_lap": 93.449,
+      "best_lap_time": "+5.979",
+      "gap_to_fastest": 5.978999999999999
+    },
+    {
+      "position": 19,
+      "driver_number": 18,
+      "driver_code": "STR",
+      "driver_name": "Lance Stroll",
+      "team": "Aston Martin",
+      "best_lap": 93.653,
+      "best_lap_time": "+6.183",
+      "gap_to_fastest": 6.183000000000007
+    },
+    {
+      "position": 20,
+      "driver_number": 77,
+      "driver_code": "BOT",
+      "driver_name": "Valtteri Bottas",
+      "team": "Cadillac",
+      "best_lap": 93.774,
+      "best_lap_time": "+6.304",
+      "gap_to_fastest": 6.304000000000002
+    },
+    {
+      "position": 21,
+      "driver_number": 11,
+      "driver_code": "PER",
+      "driver_name": "Sergio Perez",
+      "team": "Cadillac",
+      "best_lap": 94.509,
+      "best_lap_time": "+7.039",
+      "gap_to_fastest": 7.0390000000000015
+    },
+    {
+      "position": 22,
+      "driver_number": 5,
+      "driver_code": "BOR",
+      "driver_name": "Gabriel Bortoleto",
+      "team": "Audi",
+      "best_lap": 101.564,
+      "best_lap_time": "+14.094",
+      "gap_to_fastest": 14.093999999999994
+    }
+  ]
+}
